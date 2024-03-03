@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.sefirot.bookstore.domain.Categoria;
+import com.sefirot.bookstore.dtos.CategoriaDTO;
 import com.sefirot.bookstore.repositories.CategoriaRepository;
 import com.sefirot.bookstore.service.exceptions.ObjectNotFoundException;
 
@@ -28,6 +29,13 @@ public class CategoriaService {
 	
 	public Categoria create(Categoria obj) {
 		obj.setId(null);
+		return repository.save(obj);
+	}
+
+	public Categoria update(Integer id, CategoriaDTO objDTO) {
+		Categoria obj = findById(id);
+		obj.setNome(objDTO.getNome());
+		obj.setDescricao(objDTO.getDescricao());
 		return repository.save(obj);
 	}
 
