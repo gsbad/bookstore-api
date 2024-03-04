@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.sefirot.bookstore.domain.Livro;
@@ -28,5 +29,17 @@ public class LivroService {
 	public List<Livro> findAll(Integer id_cat) {
 		categoriaService.findById(id_cat);
 		return repository.findAllByCategoria(id_cat);
+	}
+
+
+	public Livro update(Integer id, Livro obj) {
+		Livro newObj = findById(id);
+		updateData(newObj, obj);
+		return repository.save(newObj);
+	}
+	private void updateData(Livro newObj, Livro obj) {
+		newObj.setTitulo(obj.getTitulo());
+		newObj.setNome_autor(obj.getNome_autor());
+		newObj.setTexto(obj.getTexto());
 	}
 }
