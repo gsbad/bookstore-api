@@ -35,9 +35,9 @@ A simple backend CRUD application for managing book categories and books.
   - `DELETE /api/categorias/{categoryId}`: Delete a category.
 
 - **Books**:
-  - `GET /api/livros?categoria={categoryId}`: Get a list of all books of a specific categorie.
+  - `GET /api/livros?categoria={categoryId}`: Get a list of all books of a specific category.
   - `GET /api/livros/{bookId}`: Get details of a specific book.
-  - `POST /api/livros?categoria={categoryId}`: Create a new book in a specific categorie.
+  - `POST /api/livros?categoria={categoryId}`: Create a new book in a specific category.
   - `PUT /api/livros/{bookId}`: Update an existing book.
   - `DELETE /api/livros/{bookId}`: Delete a book.
 
