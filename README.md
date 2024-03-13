@@ -15,8 +15,9 @@ A simple backend CRUD application for managing book categories and books.
 - **Spring Boot**: Framework for building Java applications.
 - **Spring Data JPA**: For database interaction.
 - **MySQL**: Relational database management system.
+- **H2 Database**: Relational database management system for tests.
 - **Maven**: Build and dependency management.
-- 
+
 ## Getting Started
 
 1. Clone this repository.
