@@ -10,6 +10,7 @@ public class LivroDTO implements Serializable {
 
 	private Integer id;
 	private String titulo;
+	private String autor;
 
 	public LivroDTO() {
 		super();
@@ -19,6 +20,15 @@ public class LivroDTO implements Serializable {
 		super();
 		this.id = obj.getId();
 		this.titulo = obj.getTitulo();
+		this.autor = obj.getNome_autor();
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	public Integer getId() {
